@@ -4,6 +4,7 @@
 
   // Todo Collection
   // ---------------
+  console.log("inside collections/todos")
 
   // The collection of todos is backed by *localStorage* instead of a remote
   // server.
@@ -11,6 +12,10 @@
 
     // Reference to this collection's model.
     model: app.Todo,
+
+    initialize: function() {
+      console.log("todos being initialized")
+    },
 
     // Save all of the todo items under the `"todos-backbone"` namespace.
     localStorage: new Backbone.LocalStorage('todos-backbone'),
@@ -41,6 +46,6 @@
       return todo.get('order');
     }
   });
-
+  console.log("todos being instantiated")
   // Create our global collection of **Todos**.
   app.Todos = new TodoList();

@@ -1,4 +1,4 @@
-/ js/views/app.js
+// js/views/app.js
 
   var app = app || {};
 
@@ -39,7 +39,8 @@
       this.listenTo(app.Todos, 'change:completed', this.filterOne);
       this.listenTo(app.Todos,'filter', this.filterAll);
       this.listenTo(app.Todos, 'all', this.render);
-
+      
+      console.log("calling fetch on todos")
       app.Todos.fetch();
     },
 

@@ -1,5 +1,5 @@
   var app = app || {};
-
+  console.log("inside model/todo")
   app.Todo = Backbone.Model.extend({
 
     defaults: {
